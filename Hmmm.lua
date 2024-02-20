@@ -26,3 +26,5 @@ https://open.spotify.com/track/6U9STPNloFqjoSsDrdHmRH?si=E28vvgoxTWGdBb8jbiyV_w
 --
 --
       print("Me desculpem, pessoal, mas vou dar um tempo da internet. Sinto muito por qualquer erro meu. Se quiserem me remover da amizade no Roblox ou no Discord, tudo bem. Não vou forçar vocês a ficarem perto de mim. Sou um garoto emotivo pra caceta, então espero que todos sejam felizes de coração. ❤️")
+--
+                  não se preocupem viu gente eu vou melhorar mesmo que provavelmente vcs nem se importem mas dboa 🤠
