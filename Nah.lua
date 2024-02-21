@@ -20,7 +20,7 @@ end)
 UICorner.Parent = ImageButton1
 
 do local GUI = game.CoreGui:FindFirstChild("SOMEXHUB");if GUI then GUI:Destroy();end;if _G.Color == nil then
-    _G.Color = Color3.fromRGB(0, 247, 255)
+    _G.Color = Color3.fromRGB(108, 26, 255)
    end 
 end
 
@@ -117,7 +117,7 @@ function Update:Window(text,logo,keybind)
     Main.Size = UDim2.new(0, 0, 0, 0)
 
     
-    Main:TweenSize(UDim2.new(0, 656, 0, 350),"Out","Quad",0.4,true)
+    Main:TweenSize(UDim2.new(0, 656, 0, 450),"Out","Quad",0.4,true)
 
     local UICorner = Instance.new("UICorner")
     UICorner.Parent = Main
@@ -152,7 +152,7 @@ function Update:Window(text,logo,keybind)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
     Hub.Text = "HUB"
-    Hub.TextColor3 = Color3.fromRGB(108, 26, 255)   
+    Hub.TextColor3 = Color3.fromRGB(225, 225, 225)   
     Hub.TextSize = 20.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -177,7 +177,7 @@ function Update:Window(text,logo,keybind)
     Hubb.Position = UDim2.new(0, 480, 0, 0)
     Hubb.Size = UDim2.new(0, 81, 0, 27)
     Hubb.Font = Enum.Font.GothamSemibold
-    Hubb.Text = "hm"
+    Hubb.Text = ""
     Hubb.TextColor3 = Color3.fromRGB(255, 255, 255)
     Hubb.TextSize = 17.000
     Hubb.TextXAlignment = Enum.TextXAlignment.Left
@@ -226,7 +226,7 @@ local LogoHub = Instance.new("ImageLabel")
     Page.Parent = Main
     Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
     Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
-    Page.Size = UDim2.new(0, 490, 0, 365)
+    Page.Size = UDim2.new(0, 490, 0, 450)
 
     local UICorner = Instance.new("UICorner")
     UICorner.Parent = Page
