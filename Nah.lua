@@ -439,59 +439,7 @@ local LogoHub = Instance.new("ImageLabel")
                 ):Play()
                 callback()
             end)
-        end
-        function main:AddTarget()
-    local Frame = Instance.new("Frame")
-    local UICorner = Instance.new("UICorner")
-    local ImageLabel = Instance.new("ImageLabel")
-    local TextInput = Instance.new("TextBox")
-    local ToolButton = Instance.new("ImageButton")
-    local InfoLabel = Instance.new("TextLabel")
-
-    Frame.Name = "TargetFrame"
-    Frame.Parent = MainFramePage
-    Frame.BackgroundColor3 = _G.Color
-    Frame.Size = UDim2.new(0, 470, 0, 31)
-
-    UICorner.CornerRadius = UDim.new(0, 5)
-    UICorner.Parent = Frame
-
-    ImageLabel.Name = "TargetImage"
-    ImageLabel.Parent = Frame
-    ImageLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    ImageLabel.Position = UDim2.new(0, 1, 0, 1)
-    ImageLabel.Size = UDim2.new(0, 100, 0, 100)
-    ImageLabel.Image = "rbxassetid://10818605405"
-
-    TextInput.Name = "TargetName_Input"
-    TextInput.Parent = Frame
-    TextInput.BackgroundColor3 = Color3.fromRGB(0, 140, 140)
-    TextInput.BackgroundTransparency = 0.300
-    TextInput.Position = UDim2.new(0, 105, 0, 1)
-    TextInput.Size = UDim2.new(0, 175, 0, 29)
-    -- Add other properties as needed
-
-    ToolButton.Name = "ClickTargetTool_Button"
-    ToolButton.Parent = TextInput
-    ToolButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    ToolButton.BackgroundTransparency = 1.000
-    ToolButton.Position = UDim2.new(0, 180, 0, 0)
-    ToolButton.Size = UDim2.new(0, 30, 0, 30)
-    ToolButton.Image = "rbxassetid://2716591855"
-    -- Add other properties as needed
-
-    InfoLabel.Name = "UserIDTargetLabel"
-    InfoLabel.Parent = Frame
-    InfoLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    InfoLabel.BackgroundTransparency = 1.000
-    InfoLabel.Position = UDim2.new(0, 105, 0, 32)
-    InfoLabel.Size = UDim2.new(0, 300, 0, 75)
-    -- Add other properties as needed
-
-    -- Add your event handling logic here
-
-    return Frame
-end
+		end
         function main:AddToggle(text,config,callback)
             config = config or false
             local toggled = config
@@ -1159,8 +1107,11 @@ T = AddLabel("aaaaa")
 T = AddButton("aaa",function()
 		print("aa")
 end)
-T = AddToggle("aa",false,function()
+T = AddToggle("aa",false,function(value)
+		if Toggle = true do print("abc")
 end)
 T = AddTextbox("aaa",X,function()
+		print("q")
 end)
-T = AddDropDown("aaa","a,b,c",
+T = AddDropDown("aaa","a,b,c",function()
+		if "aa" = Selected do print("a")
