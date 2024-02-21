@@ -1097,10 +1097,7 @@ end
 local Library = Update:Window("    Beto","16329392936",Enum.KeyCode.RightControl);
 
 local T = Library:AddTab("Target","16293860067")
-local B = Library:AddTab("Bola","")
-local C = Library:AddTab("Cola","")
-local D = Library:AddTab("Dola","")
-local E = Library:AddTab("Eloba","")
+
 -------------------------------------------------------
 --Variables
 
@@ -1108,7 +1105,7 @@ local E = Library:AddTab("Eloba","")
 -------------------------------------------------------
 --teste de Butão
 local Label = T:AddLabel("aaaaa")
-local Button = B:AddButton("aaa",function()
+local Button = T:AddButton("aaa",function()
 		print("aa")
 end)
   Playerslist = {}
@@ -1117,11 +1114,11 @@ end)
         table.insert(Playerslist,v.Name)
     end
     
-    local SelectedPly = D:AddDropdown("Select Player",Playerslist,function(value)
+    local SelectedPly = T:AddDropdown("Select Player",Playerslist,function(value)
         _G.SelectPly = value
     end)
     
-    D:AddButton("Refresh Player",function()
+    T:AddButton("Refresh Player",function()
         Playerslist = {}
         SelectedPly:Clear()
         for i,v in pairs(game:GetService("Players"):GetChildren()) do  
@@ -1129,7 +1126,7 @@ end)
         end
     end)
     
-    D:AddToggle("Spectate Player",false,function(value)
+    T:AddToggle("Spectate Player",false,function(value)
         SpectatePlys = value
         local plr1 = game:GetService("Players").LocalPlayer.Character.Humanoid
         local plr2 = game:GetService("Players"):FindFirstChild(_G.SelectPly)
@@ -1138,7 +1135,7 @@ end)
         until SpectatePlys == false 
         game:GetService("Workspace").Camera.CameraSubject = game:GetService("Players").LocalPlayer.Character.Humanoid
     end)
-local slider = D:AddSlider("slider",15,100,function()
+local slider = T:AddSlider("slider",15,100,function()
 		print("end")
 		end)
-local testeline = E:AddLine()
+local testeline = T:AddLine()
