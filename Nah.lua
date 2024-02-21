@@ -1107,21 +1107,21 @@ local E = Library:AddTab("Eloba","")
 
 -------------------------------------------------------
 --teste de Butão
-T:AddLabel("aaaaa")
-B:AddButton("aaa",function()
+local Label = T:AddLabel("aaaaa")
+local Button = B:AddButton("aaa",function()
 		print("aa")
 end)
-C:AddToggle("a",false,function(IsEnable)
+local Toggle = C:AddToggle("a",false,function(IsEnable)
 		if IsEnable = true then
 			print("a")
 			IsEnable = false
 		end)
-D:AddDropdown("drop","a,b,c",function()
+local dropdown = D:AddDropdown("drop","a,b,c",function()
 		print("a")
 			print("b")
 			print("c")
 		end)
-D:AddSlider("slider",15,100,function()
+local slider = D:AddSlider("slider",15,100,function()
 		print("end")
 		end)
-E:AddLine()
+local testeline = E:AddLine()
