@@ -1097,6 +1097,10 @@ end
 local Library = Update:Window("    Beto","16329392936",Enum.KeyCode.RightControl);
 
 local T = Library:AddTab("Target","16293860067")
+local B = Library:AddTab("Bola","")
+local C = Library:AddTab("Cola","")
+local D = Library:AddTab("Dola","")
+local E = Library:AddTab("Eloba","")
 -------------------------------------------------------
 --Variables
 
@@ -1104,3 +1108,15 @@ local T = Library:AddTab("Target","16293860067")
 -------------------------------------------------------
 --teste de Butão
 T = AddLabel("aaaaa")
+B = AddButton("aaa",function()
+		print("aa")
+end)
+C = AddToggle("aa",false,function(value)
+		if Toggle = true do print("abc")
+end)
+D = AddTextbox("aaa",X,function()
+		print("q")
+end)
+E = AddDropDown("aaa","a,b,c",function()
+		if "aa" = Selected do print("a")
+						
