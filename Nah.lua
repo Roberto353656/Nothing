@@ -20,7 +20,7 @@ end)
 UICorner.Parent = ImageButton1
 
 do local GUI = game.CoreGui:FindFirstChild("SOMEXHUB");if GUI then GUI:Destroy();end;if _G.Color == nil then
-    _G.Color = Color3.fromRGB(108, 26, 255)
+    _G.Color = Color3.fromRGB(108, 26, 255) --cor dos butão
    end 
 end
 
@@ -91,7 +91,7 @@ local function MakeDraggable(topbarobject, object)
         end
     )
 end
-
+--window
 local Update = {}
 
 function Update:Window(text,logo,keybind)
@@ -117,7 +117,7 @@ function Update:Window(text,logo,keybind)
     Main.Size = UDim2.new(0, 0, 0, 0)
 
     
-    Main:TweenSize(UDim2.new(0, 656, 0, 450),"Out","Quad",0.4,true)
+    Main:TweenSize(UDim2.new(0, 656, 0, 350),"Out","Quad",0.4,true)
 
     local UICorner = Instance.new("UICorner")
     UICorner.Parent = Main
@@ -142,7 +142,7 @@ function Update:Window(text,logo,keybind)
     Name.Text = text
     Name.TextColor3 = Color3.fromRGB(225, 225, 225)
     Name.TextSize = 20.000
-
+--Hub Grande
     local Hub = Instance.new("TextLabel")
     Hub.Name = "Hub"
     Hub.Parent = Top
@@ -152,10 +152,10 @@ function Update:Window(text,logo,keybind)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
     Hub.Text = "HUB"
-    Hub.TextColor3 = Color3.fromRGB(225, 225, 225)   
+    Hub.TextColor3 = Color3.fromRGB(225, 225, 225)
     Hub.TextSize = 20.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
-
+--Map
     local MapName = Instance.new("TextLabel")
     MapName.Name = "MapName"
     MapName.Parent = Top
@@ -168,7 +168,7 @@ function Update:Window(text,logo,keybind)
     MapName.TextColor3 = Color3.fromRGB(225, 225, 225)   
     MapName.TextSize = 20.000
     MapName.TextXAlignment = Enum.TextXAlignment.Left
-
+--Segundo Título
     local Hubb = Instance.new("TextLabel")
     Hubb.Name = "Hubb"
     Hubb.Parent = Top
@@ -181,7 +181,7 @@ function Update:Window(text,logo,keybind)
     Hubb.TextColor3 = Color3.fromRGB(255, 255, 255)
     Hubb.TextSize = 17.000
     Hubb.TextXAlignment = Enum.TextXAlignment.Left
-
+--Tab área
     local Tab = Instance.new("Frame")
     Tab.Name = "Tab"
     Tab.Parent = Main
@@ -189,7 +189,7 @@ function Update:Window(text,logo,keybind)
     Tab.BackgroundTransparency = 1.000
     Tab.Position = UDim2.new(0, 5, 0, 30)
     Tab.Size = UDim2.new(0, 150, 0, 350)
-
+--area do logo
 local LogoHub = Instance.new("ImageLabel")
     LogoHub.Name = "LogoHub"
     LogoHub.Parent = Top
@@ -198,7 +198,7 @@ local LogoHub = Instance.new("ImageLabel")
     LogoHub.Position = UDim2.new(0, 5, 0, 1)
     LogoHub.Size = UDim2.new(0, 26, 0, 26)
     LogoHub.Image = "rbxassetid://16329392936"
-
+--Area dos scrolls
     local ScrollTab = Instance.new("ScrollingFrame")
     ScrollTab.Name = "ScrollTab"
     ScrollTab.Parent = Tab
@@ -220,13 +220,13 @@ local LogoHub = Instance.new("ImageLabel")
     PPD.Parent = ScrollTab
     PPD.PaddingLeft = UDim.new(0, 10)
     PPD.PaddingTop = UDim.new(0, 10)
-
+--Tamanho do hub
     local Page = Instance.new("Frame")
     Page.Name = "Page"
     Page.Parent = Main
     Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
     Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
-    Page.Size = UDim2.new(0, 490, 0, 450)
+    Page.Size = UDim2.new(0, 490, 0, 365)
 
     local UICorner = Instance.new("UICorner")
     UICorner.Parent = Page
@@ -272,7 +272,7 @@ local LogoHub = Instance.new("ImageLabel")
             end
         end
     end)
-    
+    --Area dos Tab
     local uitab = {}
     
     function uitab:AddTab(text,image)
@@ -372,7 +372,7 @@ local LogoHub = Instance.new("ImageLabel")
                 ScrollTab.CanvasSize = UDim2.new(0,0,0,PLL.AbsoluteContentSize.Y + 20)
             end)
         end)
-        
+        --Area dos butão
         local main = {}
         function main:AddButton(text,callback)
             local Button = Instance.new("Frame")
@@ -439,7 +439,7 @@ local LogoHub = Instance.new("ImageLabel")
                 ):Play()
                 callback()
             end)
-		end
+        end
         function main:AddToggle(text,config,callback)
             config = config or false
             local toggled = config
@@ -1097,16 +1097,9 @@ end
 local Library = Update:Window("    Beto","16329392936",Enum.KeyCode.RightControl);
 
 local T = Library:AddTab("Target","16293860067")
-
 -------------------------------------------------------
 --Variables
-function copySpawnCoordinatesToClipboard(speaker)
-    local spawnpos = speaker.Character:WaitForChild("HumanoidRootPart").CFrame.Position
-    local coordinatesString = 'Spawn point coordinates: ' .. tostring(spawnpos)
-    
-    -- Copie as coordenadas para a área de transferência
-    setclipboard(coordinatesString)
-end
+
 
 -------------------------------------------------------
 --teste de Butão
