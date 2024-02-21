@@ -1144,8 +1144,7 @@ end)
 local slider = T:AddSlider("slider",15,100,function()
 		print("end")
 		end)
-T:AddTextbox("Place Job Id", true, function()
+T:AddTextbox("Fake Exp",true,function(value)
 
-	copySpawnCoordinatesToClipboard(game.Players.LocalPlayer)
-
+        game:GetService("Players").LocalPlayer.Data.Exp.Value = value
 	end)
