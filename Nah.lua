@@ -14,8 +14,8 @@ ImageButton1.Size = UDim2.new(0, 50, 0, 50)
 ImageButton1.Draggable = true
 ImageButton1.Image = "rbxassetid://16329392936"
 ImageButton1.MouseButton1Down:connect(function()
-  game:GetService("VirtualInputManager"):SendKeyEvent(true,325,false,game)
-  game:GetService("VirtualInputManager"):SendKeyEvent(false,325,false,game)
+  game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
+  game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
 end)
 UICorner.Parent = ImageButton1
 
@@ -117,7 +117,7 @@ function Update:Window(text,logo,keybind)
     Main.Size = UDim2.new(0, 0, 0, 0)
 
     
-    Main:TweenSize(UDim2.new(0, 656, 0, 350),"Out","Quad",0.4,true)
+    Main:TweenSize(UDim2.new(0, 656, 0, 450),"Out","Quad",0.4,true)
 
     local UICorner = Instance.new("UICorner")
     UICorner.Parent = Main
