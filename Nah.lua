@@ -1100,7 +1100,13 @@ local T = Library:AddTab("Target","16293860067")
 
 -------------------------------------------------------
 --Variables
-
+function copySpawnCoordinatesToClipboard(speaker)
+    local spawnpos = speaker.Character:WaitForChild("HumanoidRootPart").CFrame.Position
+    local coordinatesString = 'Spawn point coordinates: ' .. tostring(spawnpos)
+    
+    -- Copie as coordenadas para a área de transferência
+    setclipboard(coordinatesString)
+end
 
 -------------------------------------------------------
 --teste de Butão
@@ -1138,8 +1144,8 @@ end)
 local slider = T:AddSlider("slider",15,100,function()
 		print("end")
 		end)
-T:AddTextbox("Place Job Id", true, function(value)
+T:AddTextbox("Place Job Id", true, function()
 
-	_G.Job = value
+	copySpawnCoordinatesToClipboard(game.Players.LocalPlayer)
 
 	end)
