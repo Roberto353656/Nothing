@@ -1111,16 +1111,33 @@ local Label = T:AddLabel("aaaaa")
 local Button = B:AddButton("aaa",function()
 		print("aa")
 end)
-local Toggle = C:AddToggle("a",false,function(IsEnable)
-		if IsEnable = true then
-			print("a")
-			IsEnable = false
-		end)
-local dropdown = D:AddDropdown("drop","a,b,c",function()
-		print("a")
-			print("b")
-			print("c")
-		end)
+  Playerslist = {}
+    
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        table.insert(Playerslist,v.Name)
+    end
+    
+    local SelectedPly = D:AddDropdown("Select Player",Playerslist,function(value)
+        _G.SelectPly = value
+    end)
+    
+    D:AddButton("Refresh Player",function()
+        Playerslist = {}
+        SelectedPly:Clear()
+        for i,v in pairs(game:GetService("Players"):GetChildren()) do  
+            SelectedPly:Add(v.Name)
+        end
+    end)
+    
+    D:AddToggle("Spectate Player",false,function(value)
+        SpectatePlys = value
+        local plr1 = game:GetService("Players").LocalPlayer.Character.Humanoid
+        local plr2 = game:GetService("Players"):FindFirstChild(_G.SelectPly)
+        repeat wait(.1)
+            game:GetService("Workspace").Camera.CameraSubject = game:GetService("Players"):FindFirstChild(_G.SelectPly).Character.Humanoid
+        until SpectatePlys == false 
+        game:GetService("Workspace").Camera.CameraSubject = game:GetService("Players").LocalPlayer.Character.Humanoid
+    end)
 local slider = D:AddSlider("slider",15,100,function()
 		print("end")
 		end)
