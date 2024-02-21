@@ -1138,4 +1138,8 @@ end)
 local slider = T:AddSlider("slider",15,100,function()
 		print("end")
 		end)
-local testeline = T:AddLine()
+T:AddTextbox("Place Job Id", true, function(value)
+
+	_G.Job = value
+
+	end)
