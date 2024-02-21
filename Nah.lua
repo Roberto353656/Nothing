@@ -1141,9 +1141,9 @@ end)
         until SpectatePlys == false 
         game:GetService("Workspace").Camera.CameraSubject = game:GetService("Players").LocalPlayer.Character.Humanoid
     end)
-local slider = T:AddSlider("slider",15,100,function()
-		print("end")
-		end)
+local slider = T:AddSlider("speed",16,100,1,function(value)
+            print(value)
+        end)
 T:AddTextbox("Fake Exp",true,function(value)
 
         game:GetService("Players").LocalPlayer.Data.Exp.Value = value
