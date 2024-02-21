@@ -1117,7 +1117,3 @@ end)
 D = AddTextbox("aaa",X,function()
 		print("q")
 end)
-E = AddDropDown("aaa","a,b,c",function()
-		if "aa" = Selected do print("a")
-					end)
-						
